@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Paróquia São João Batista - Macaé/RJ`,
+    metaDescription: `Notícias, artigos e informações sobre a Paróquia São João Batista de Macaé/RJ`,
+    description: `Website temporário. Em breve será disponibilizado nesse endereço o site da Paróquia administrado pela Pascom.`,
+    author: `https://vfcardoso.dev`,
+    siteUrl: `https://paroquiasaojoaobatistamacae.com`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,17 +20,25 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Paróquia São João Batista - Macaé/RJ`,
+        short_name: `PSJB-Macaé/RJ`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#BF244E`,
+        theme_color: `#BF244E`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/brasao.png`, // This path is relative to the root of the site.
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      options: {
+        fonts: [
+          { family: `Merriweather` }
+        ],
+        display: 'swap'
+      }
+    },
+    `gatsby-plugin-sitemap`,
   ],
 }
