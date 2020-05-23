@@ -5,24 +5,25 @@ import Img from "gatsby-image"
 import * as S from './styled'
 
 const Logo = () => {
-  const data = useStaticQuery(graphql`
-      query {
+    const data = useStaticQuery(graphql`
+    query {
         placeholderImage: file(relativePath: { eq: "brasao.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 350) {
-              ...GatsbyImageSharpFluid
+            childImageSharp {
+                fixed(width: 350) {
+                    ...GatsbyImageSharpFixed_tracedSVG
+                }
             }
-          }
         }
-      }
+    }
     `
-  )
-
-  return (
-      <S.ImageWrapper>
-        <Img fluid={data.placeholderImage.childImageSharp.fluid} />
-      </S.ImageWrapper>
     )
-}
-
-export default Logo
+    
+    return (
+        <S.ImageWrapper>
+            <Img fixed={data.placeholderImage.childImageSharp.fixed} backgroundColor="true" />
+        </S.ImageWrapper>
+        )
+    }
+    
+    export default Logo
+    
