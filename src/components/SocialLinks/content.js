@@ -13,9 +13,9 @@ const links = [
     },
     {
         label: 'Youtube',
-        url: 'https://youtube.com/paroquiasaojoaobatistamacae',
+        url: 'https://www.youtube.com/channel/UCAz4F63v81HSJC-Xt_yOkNg',
         external: true,
-        active: false
+        active: true
     }
 ]
 
