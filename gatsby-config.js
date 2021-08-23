@@ -2,7 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `Paróquia São João Batista - Macaé/RJ`,
     metaDescription: `Notícias, artigos e informações sobre a Paróquia São João Batista de Macaé/RJ`,
-    description: `Website temporário. Em breve será disponibilizado nesse endereço o site da Paróquia administrado pela Pascom.`,
+    description: `O site está em manutenção. Estamos trabalhando para melhor servir. Voltaremos em breve.`,
+    //description: `Website temporário. Em breve será disponibilizado nesse endereço o site da Paróquia administrado pela Pascom.`,
     author: `https://vfcardoso.dev`,
     siteUrl: `https://paroquiasaojoaobatistamacae.com`
   },
@@ -37,10 +38,12 @@ module.exports = {
     },
     `gatsby-plugin-styled-components`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
-          { family: `Merriweather` }
+          { 
+            family: `Merriweather`,
+          }
         ],
         display: 'swap'
       }
